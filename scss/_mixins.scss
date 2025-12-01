@@ -1,0 +1,24 @@
+// Mixins
+
+// Body font: clean, modern, readable
+@mixin body-font {
+  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  color: $gray-700;
+}
+
+// Heading font: bold, condensed, glowing-ready
+@mixin heading-font {
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: $secondary; // golden by default
+  text-shadow: 0 0 10px $secondary-glow, 0 0 6px $pink; // golden + pink glow
+}

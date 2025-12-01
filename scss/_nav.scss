@@ -1,0 +1,104 @@
+#sideNav {
+  background: linear-gradient(135deg, $primary, $secondary); // Indigo to gold gradient
+  color: $light;
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.6); // indigo glow shadow
+
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: $light;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary; // golden hover
+      text-shadow: 0 0 10px $secondary-glow; // glowing gold hover
+    }
+
+    &.active {
+      color: $secondary;
+      font-weight: 900;
+      text-shadow: 0 0 12px $secondary-glow; // stronger glow for active link
+    }
+  }
+
+  .navbar-toggler {
+    &:focus {
+      outline-color: $primary-glow; // glowing indigo outline
+    }
+  }
+}
+
+// Global nav-link styling
+.nav-link {
+  color: $light;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $secondary; // gold
+    text-shadow: 0 0 8px $secondary-glow; // glowing gold hover
+  }
+}
+
+// ✨ Subheadings inside sidebar (updated to dark pink)
+.subheading {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: $pink; // dark pink accent
+  text-shadow: 0 0 8px lighten($pink, 15%); // glowing pink effect
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: $sidebar-base-width;
+    height: 100vh;
+
+    .navbar-brand {
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem;
+
+      .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid fade-out($white, 0.8);
+        box-shadow: 0 0 15px $secondary-glow; // glowing gold around profile image
+      }
+    }
+
+    .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+
+      width: 100%;
+      margin-bottom: auto;
+
+      .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+
+        .nav-item {
+          display: block;
+
+          .nav-link {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

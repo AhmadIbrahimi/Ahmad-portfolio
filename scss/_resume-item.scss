@@ -1,0 +1,137 @@
+section.resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  margin: 0 auto;
+
+  // 🎯 Golden section headings with glow
+  .resume-section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $secondary;
+    border-bottom: 2px solid $secondary;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-shadow: 0 0 12px $secondary-glow;
+  }
+
+  .resume-item {
+    position: relative;
+    margin-bottom: 3rem;
+    background-color: $light;
+    border: 1px solid $secondary;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+
+    // 🟡 Golden timeline dot with glow
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.5rem;
+      left: -1.5rem;
+      width: 12px;
+      height: 12px;
+      background-color: $secondary;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $secondary-glow;
+    }
+
+    .resume-content {
+      .resume-item-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: $dark-brown;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 0.25rem;
+        text-shadow: 0 0 6px rgba(92, 64, 51, 0.4);
+      }
+
+      .resume-item-subtitle {
+        font-size: 1.2rem;
+        color: $pink;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 8px lighten($pink, 15%);
+      }
+
+      .resume-item-description {
+        font-size: 1rem;
+        color: $gray-700;
+        line-height: 1.6;
+
+        // 🌿 Skills & Hobbies list items with animated glowing green leaves
+        ul {
+          list-style: none;
+          padding-left: 0;
+
+          li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: $gray-700;
+
+            &::before {
+              content: "\f06c"; // Font Awesome leaf icon
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              position: absolute;
+              left: 0;
+              top: 0;
+              color: $success;
+              text-shadow: 0 0 6px $success-glow;
+              animation: leafPulse 1.8s infinite ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    .resume-date {
+      font-size: 0.9rem;
+      color: $gray-500;
+      font-weight: 500;
+      min-width: none;
+      text-shadow: 0 0 6px $primary-glow;
+    }
+  }
+}
+
+// 🌿 Leaf pulse animation
+@keyframes leafPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 6px $success-glow;
+  }
+
+  50% {
+    transform: scale(1.2);
+    text-shadow: 0 0 12px lighten($success, 20%);
+  }
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+
+    .resume-item {
+      .resume-date {
+        min-width: 18rem;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}

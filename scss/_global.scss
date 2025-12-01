@@ -1,0 +1,143 @@
+// Global styling for this template
+
+body {
+  @include body-font;
+  padding-top: 54px;
+  color: $gray-700;
+  background-color: $pink-bg; // light pink background
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.2); // subtle golden glow on text
+}
+
+// ✨ Bound every section with glowing red border
+section {
+  border: 2px solid $danger; // red boundary
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 15px $danger-glow; // glowing red effect
+  background-clip: padding-box;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: $sidebar-base-width;
+  }
+}
+
+// Optional: Declare dark brown if not already in _variables.scss
+$dark-brown: #5C4033 !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $secondary; // golden headings
+  text-shadow: 0 0 12px $secondary-glow; // glowing gold effect
+}
+
+// 🎯 Custom styling for primary headings
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+  color: $dark-brown; // dark brown override for contrast
+  text-shadow: 0 0 15px $secondary-glow; // stronger glow
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: $gray-800;
+}
+
+// ✨ Subheadings updated to dark pink
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  @include heading-font;
+  font-size: 1.5rem;
+  color: $pink; // dark pink accent
+  text-shadow: 0 0 8px $pink-glow; // glowing pink effect
+}
+
+// 🔗 Social Icons
+.social-icons {
+  a {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: rgb(68, 3, 11); // dark red base
+    color: $white !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // Hover effect: golden glow
+    &:hover {
+      background-color: $secondary; // golden hover
+      box-shadow: 0 0 12px $secondary-glow; // glowing gold effect
+      color: $dark;
+      text-shadow: 0 0 8px $pink; // subtle pink glow accent
+    }
+
+    // 🎯 Special styling for email icon/link
+    &.email {
+      background-color: $secondary; // golden background
+      color: $dark; // dark text/icon for contrast
+      box-shadow: 0 0 10px $secondary-glow;
+
+      &:hover {
+        background-color: darken($secondary, 10%); // richer gold on hover
+        color: $white;
+        box-shadow: 0 0 15px $secondary-glow;
+        text-shadow: 0 0 8px $pink; // glowing pink accent
+      }
+    }
+  }
+}
+
+// 💻 Developer Icons
+.dev-icons {
+  font-size: 3rem;
+
+  .list-inline-item i {
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $secondary; // golden hover
+      text-shadow: 0 0 10px $secondary-glow, 0 0 6px $pink; // golden + pink glow
+    }
+  }
+}
+
+// Links within paragraphs
+p a {
+  color: $primary;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: darken($primary, 15%);
+    text-shadow: 0 0 10px $pink; // glowing pink accent
+  }
+}

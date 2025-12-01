@@ -1,0 +1,61 @@
+// Variables
+
+// Restate Bootstrap Variables
+$white: #ffffff !default;
+$gray-100: #f8fafc !default; // soft off-white
+$gray-200: #e5e7eb !default;
+$gray-300: #d1d5db !default;
+$gray-400: #9ca3af !default;
+$gray-500: #6b7280 !default;
+$gray-600: #4b5563 !default;
+$gray-700: #374151 !default;
+$gray-800: #1f2937 !default;
+$gray-900: #111827 !default;
+$black: #0a0a0a !default; // deep black for luxury contrast
+
+// Fancy Accent Colors
+$pink-bg: #ffe4e1 !default; // light pink background
+$gold: #ffd700 !default; // luxurious gold
+$brown: #8b4513 !default; // rich brown
+$dark-brown: #5C4033 !default; // dark brown for text
+$blue: #2563eb !default; // royal blue
+$indigo: #4f46e5 !default; // elegant indigo
+$purple: #8b5cf6 !default; // vibrant purple accent
+$pink: #ec4899 !default; // chic dark pink accent
+$light-blue: #0ea5e9 !default; // bright light blue
+$teal: #0d9488 !default; // teal luxury
+$red: #ef4444 !default; // modern red
+$orange: #d97706 !default; // warm amber
+$yellow: #facc15 !default; // golden highlight
+$green: #22c55e !default; // fresh emerald
+$cyan: #06b6d4 !default; // aqua accent
+$lime: #84cc16 !default; // vibrant lime
+$emerald: #10b981 !default; // rich emerald
+
+// Theme Roles
+$primary: $indigo !default; // Rich indigo (sidebar base)
+$secondary: $gold !default; // True gold accent
+$success: $green !default; // Emerald green
+$info: $cyan !default; // Aqua glow
+$warning: $orange !default; // Amber highlight
+$danger: $red !default; // Vibrant red
+$light: $gray-100 !default; // Soft off-white
+$dark: $black !default; // Deep black for luxury contrast
+$light-bg: $gray-100 !default; // light background
+$dark-bg: $gray-900 !default; // dark background
+
+// ✨ Glow variants for hover, shadows, gradients
+$primary-glow: lighten($primary, 10%);
+$secondary-glow: lighten($secondary, 15%);
+$success-glow: lighten($success, 10%);
+$info-glow: lighten($info, 10%);
+$warning-glow: lighten($warning, 10%);
+$danger-glow: lighten($danger, 10%);
+$dark-glow: lighten($dark, 15%);
+$light-glow: darken($light, 10%);
+$pink-glow: lighten($pink, 15%); // glowing pink accent
+
+// Page Variables
+$sidebar-base-width: 18rem; // slightly wider for a premium feel
+$resume-item-border-color: $secondary; // golden border for resume items
+$resume-item-hover-bg: lighten($secondary, 40%); // light golden hover background

@@ -1,0 +1,24 @@
+// Background utility
+.bg-primary {
+  background-color: $primary !important;
+  box-shadow: 0 0 12px $primary-glow; // indigo glow
+}
+
+// Text utility
+.text-primary {
+  color: $primary !important;
+  text-shadow: 0 0 8px $pink; // glowing pink accent
+}
+
+// Anchor links
+a {
+  color: $primary;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($primary, 15%);
+    text-shadow: 0 0 10px $pink; // glowing pink hover
+  }
+}
