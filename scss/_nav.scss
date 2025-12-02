@@ -74,6 +74,7 @@
       .img-profile {
         max-width: 10rem;
         max-height: 10rem;
+        border-radius: 50%;
         border: 0.5rem solid fade-out($white, 0.8);
         box-shadow: 0 0 15px $secondary-glow; // glowing gold around profile image
       }
